@@ -42,7 +42,13 @@ LUA制御ビークルの最初の1歩として必要性が高いと思われる
 ./src/sample/lib/pilot_guidance.lua
 </pre>
 
+その上で、以下の実装で実際に操縦を行います。
+<pre>
+./src/sample/pilot/turn_strategies/roll_base_turn.lua
+</pre>
+
 角度の計算とか（直接的には）一切行っていません。数学できないマンでも全然大丈夫。
+
 
 #### 処理の全体の流れ
 
