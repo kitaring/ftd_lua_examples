@@ -1,3 +1,10 @@
+--[[
+  メイン処理から呼び出される行動の起点
+  離陸 → 巡行 → 戦闘 → 着陸
+  等のフェーズを処理する
+
+  ※本サンプルでは離陸と巡行フェーズのみ実装
+]]--
 Behavior = {
   current_phase = nil,
 }
@@ -9,6 +16,7 @@ function Behavior.update(self, I)
     return false
   end
 
+  -- ビークルのロード直後は離陸フェーズから開始する
   if not self.current_phase then
     self.current_phase = Takeoff.new(I)
   end
